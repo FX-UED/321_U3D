@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root ps="12344">
+  <loadObject ps="添加预制体">
+    <prefab>
+      <name showTime="0" hideTime="-1">ME5_carbody_z</name>
+      <name showTime="0" hideTime="-1">ryb-Camera</name>
+      <name showTime="0" hideTime="-1">ryb-dimian</name>
+    </prefab>
+  </loadObject>
+  <sceneObject ps="场景中物体的显示和隐藏" />
+  <cameraPosition ps="相机位置">
+    <cameraVector3>-3.4,2.5,-3.5</cameraVector3>
+    <cameraEngle>16.4,65.9,14.3</cameraEngle>
+    <targetVector3>-1.0,1.0,0.3</targetVector3>
+  </cameraPosition>
+  <SetPath ps="物体的路径运动" />
+  <UVanimation ps="UV动画" />
+  <modelAnimation ps="模型动画">
+    <animation ps="No.1">
+      <modelName>TrunkDoor_control (1)</modelName>
+      <animationStateNumber>3</animationStateNumber>
+      <waitTime>-1</waitTime>
+    </animation>
+  </modelAnimation>
+  <lightControl ps="灯光的开关" />
+  <carSpeed ps="车辆行驶" />
+  <changeMaterial ps="更改材质" />
+  <lerpColor ps="物体变色" />
+  <setTrail ps="拖尾" />
+  <rearViewMirror ps="车外后视镜翻转" />
+  <linerMove ps="直线位移" />
+  <CarControlTrigger ps="车辆功能开关，1是开，0是关">
+    <radar ps="车后方雷达">0</radar>
+    <frontLightfarNearAutoControl ps="自动远近光灯">0</frontLightfarNearAutoControl>
+    <frontLightrotateByRoad ps="车灯随动转向">0</frontLightrotateByRoad>
+    <wheelLRrotate ps="车轮左右转向">0</wheelLRrotate>
+    <rearMirrorTrueReflect ps="后视镜真实反射">0</rearMirrorTrueReflect>
+  </CarControlTrigger>
+  <textWord ps="输入显示到屏幕的文字">
+  </textWord>
+  <cameraBackgroundColor ps="屏幕背景色hex">00000000</cameraBackgroundColor>
+</root>

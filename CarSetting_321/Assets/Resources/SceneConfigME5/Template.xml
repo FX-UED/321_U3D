@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root ps="模板">
+
+  <loadObject ps="添加预制体">
+    
+    <UI ps="请输入UI的预制体的名字,showTime输入 等待几秒钟后开始 显示的时间，hideTime输入 等待几秒钟后开始 隐藏的时间（-1代表永远不隐藏）">
+      <name showTime="0" hideTime="-1"></name>
+    </UI>
+    
+    <prefab ps="请输入UI以外的预制体的名字,showTime输入 等待几秒钟后开始 显示的时间，hideTime输入 等待几秒钟后开始 隐藏的时间（-1代表永远不隐藏）">
+      <name showTime="0" hideTime="5">ME5_carbody</name>
+      <name showTime="5" hideTime="-1">Door_front_L_control</name>
+      <name showTime="0" hideTime="-1">ElectricalCober_R_control</name>
+      <name showTime="2" hideTime="-1">FrontCover_control</name>
+
+    </prefab>
+  </loadObject>
+
+  <sceneObject ps="添加预制体">
+
+      <name showTime="0" hideTime="5"></name>
+      <name showTime="5" hideTime="-1"></name>
+
+  </sceneObject>
+  
+
+  <cameraPosition ps="相机位置">
+    <cameraVector3 ps="输入相机的位置坐标,例如：0,0,0">0,1,-10</cameraVector3>
+    <cameraEngle ps="输入相机的旋转坐标,例如：0,0,0">0,1,-10</cameraEngle>
+    <targetVector3 ps="输入相机观看目标的坐标,例如：10,10,10"></targetVector3>
+  </cameraPosition>
+
+  <SetPath ps="物体的路径运动，注意：如果这个物体开始是隐藏状态，不要配置此数据。直接到unity的预制体上配置路径">
+
+    <path ps="第一个物体的路径运动">
+      <modelName ps="物体的名字">prefabname0</modelName>
+      <waitTime ps="等待几秒钟后开始路径动画">1</waitTime>
+      <pathInfo ps="输入路径动画的过程中经过的坐标,例如：0,0,0_1,1,1_2,2,2">0,0,0_10,10,10_2,2,2</pathInfo>
+      <pathTime ps="走完路径所用的时间">5</pathTime>
+      <lookType ps="如果是向前看,请输入ahead,如果是看向固定的目标,请输入目标的坐标（x,y,z）">ahead</lookType>
+    </path>
+
+    <path ps="第二个物体的路径运动">
+      <modelName ps="物体的名字">prefabname1</modelName>
+      <waitTime ps="等待几秒钟后开始路径动画">6</waitTime>
+      <pathInfo ps="输入路径动画的过程中经过的坐标,例如：0,0,0_1,1,1_2,2,2">0,0,0_1,1,1_2,2,2</pathInfo>
+      <pathTime ps="走完路径所用的时间">3</pathTime>
+      <lookType ps="如果是向前看,请输入forward,如果是看向固定的目标,请输入目标的坐标（x,y,z）">0,0,0</lookType>
+    </path>
+
+  </SetPath>
+
+  <UVanimation ps="UV动画">
+
+    <animation ps="第一个模型,例如道路一开始就正向运动">
+      <modelName ps="模型名字">road</modelName>
+      <speedX>0.5</speedX>
+      <speedY>0</speedY>
+      <delay>0</delay>
+    </animation>
+
+    <animation ps="第二个模型，道路3秒钟后反方向运动5秒钟">
+      <modelName ps="模型名字">road</modelName>
+      <speedX>-0.5</speedX>
+      <speedY>0</speedY>
+      <delay>3</delay>
+    </animation>
+
+  </UVanimation>
+
+  <modelAnimation ps="模型动画">
+
+    <animation ps="第一个模型">
+      <modelName ps="模型名字">Trunk</modelName>
+      <animationStateNumber ps="动画状态,1代表打开,0代表关闭">1</animationStateNumber>
+      <waitTime ps="动画开始前等待的时间">0</waitTime>
+    </animation>
+
+    <animation ps="第二个模型">
+      <modelName ps="模型名字">Trunk</modelName>
+      <animationStateNumber ps="动画状态,1代表打开,0代表关闭">0</animationStateNumber>
+      <waitTime ps="动画开始前等待的时间">5</waitTime>
+    </animation>
+
+  </modelAnimation>
+
+  <UIanimation ps="UI动效">
+
+    <animation>
+      <name ps="ui物体的名字,UI的动画效果在UI上提前配置好"></name>
+      <waitTime ps="动画开始前等待的时间">0</waitTime>
+    </animation>
+    <animation>
+      <name ps="ui物体的名字,UI的动画效果在UI上提前配置好"></name>
+      <waitTime ps="动画开始前等待的时间">0</waitTime>
+    
+    </animation>
+  </UIanimation>
+
+  <lightControl ps="灯光的开关,灯光默认是打开状态">
+    <lightObj>
+      <name ps="灯光的名字">DirectionalLight</name>
+      <waitTime ps="动画开始前等待的时间">3</waitTime>
+      <state ps="打开：1，关闭：0">1</state>
+    </lightObj>
+    <lightObj>
+      <name ps="灯光的名字">PointLight</name>
+      <waitTime ps="动画开始前等待的时间">2</waitTime>
+      <state ps="打开：1，关闭：0">1</state>
+    </lightObj>
+
+  </lightControl>
+
+  <carSpeed ps="车辆行驶">
+    <speed ps="移动速度"  waitTime="0">30</speed>
+    <speed ps="移动速度"  waitTime="3">45</speed>
+    <speed ps="移动速度"  waitTime="7">60</speed>
+    <speed ps="移动速度"  waitTime="10">100</speed>
+  </carSpeed>
+
+  <changeMaterial ps="更改材质">
+    <modelName ps="输入模型所在路径和名字用斜线/隔开"  waitTime="1" materialName="mat_road_1"></modelName>
+    <modelName ps="输入模型所在路径和名字用斜线/隔开"  waitTime="2" materialName="mat_road_2"></modelName>
+  </changeMaterial>
+
+  <lerpColor ps="同一个材质，从颜色 A(hex) 渐变到颜色 B(hex)">
+    <modelName ps="lerpTime是渐变所需时间"  waitTime="4" lerpTime="2" colorA="050505FF" colorB="050505FF">road/ff/ss</modelName>
+    <modelName ps="lerpTime是渐变所需时间"  waitTime="8" lerpTime="2" colorA="050505FF" colorB="050505FF">road/ff/ss</modelName>
+  </lerpColor>
+
+  <carLight ps=" 车灯打开：1，关闭：0" >
+    <lightState lightType="positionLight"       waitTime=""></lightState>
+    <lightState lightType="fogLight"            waitTime=""></lightState>
+    <lightState lightType="logoLight"           waitTime=""></lightState>
+    <lightState lightType="farLight"            waitTime=""></lightState>
+    <lightState lightType="frontDecorateLight"  waitTime=""></lightState>
+    <lightState lightType="brakeLight"  waitTime=""></lightState>
+    <lightState lightType="turnLeftLight"  waitTime=""></lightState>
+    <lightState lightType="turnRightLight"  waitTime=""></lightState>
+  </carLight>
+
+  <setTrail ps="拖尾的效果开关，拖尾的特效提前在unity配置好，此处只是控制开关">
+    <trailObject waitTime="2">Trail_red</trailObject>
+    <trailObject waitTime="2">Trail_blue</trailObject>
+  </setTrail>
+
+  <cameraBackgroundColor ps="屏幕背景色hex">050505FF</cameraBackgroundColor>
+
+  <rearViewMirror ps="旋转">
+    <item ps="第一个物体">
+    <modelName ps="物体的名字">rearViewMirror</modelName>
+    <waitTime ps="等待几秒钟后开始动画">1</waitTime>
+    <rotateVector ps="旋转轴：x/y/z">x</rotateVector>
+      <speed ps="移动速度">20</speed>
+      <angel ps="翻转的角度">30</angel>
+    </item>
+    
+    <item ps="第二个物体">
+      <modelName ps="物体的名字">window</modelName>
+      <waitTime ps="等待几秒钟后开始动画">0</waitTime>
+      <rotateVector ps="旋转轴：x/y/z">x</rotateVector>
+      <speed ps="移动速度">20</speed>
+      <angel ps="翻转的角度">5</angel>
+    </item>
+  </rearViewMirror>
+
+  <linerMove ps="直线位移(可以考虑用在车窗的升降)">
+    <item ps="第一个物体">
+    <modelName ps="物体的名字">window/carWindowFrontLeft</modelName>
+    <waitTime ps="等待几秒钟后开始动画">1</waitTime>
+    <rotateVector ps="方向：x/y/z">z</rotateVector>
+    <distance ps="移动的距离">1</distance>
+    <speed ps="移动速度">0.6</speed>
+    </item>
+    
+    <item ps="第二个物体">
+      <modelName ps="物体的名字">window/carWindowFrontRight</modelName>
+      <waitTime ps="等待几秒钟后开始动画">1</waitTime>
+      <rotateVector ps="方向：x/y/z">z</rotateVector>
+      <distance ps="移动的距离">1</distance>
+      <speed ps="移动速度">0.6</speed>
+    </item>
+    
+  </linerMove>
+
+  <CarControlTrigger ps="车辆功能开关，1是开，0是关">
+    <radar ps="车后方雷达"></radar>
+    <frontLightfarNearAutoControl ps="自动远近光灯"></frontLightfarNearAutoControl>
+    <frontLightrotateByRoad ps="车灯随动转向,场景中要创建一个CarLightTarget，并且做好路径"></frontLightrotateByRoad>
+    <wheelLRrotate ps="车轮左右转向，车身需要有位移和旋转"></wheelLRrotate>
+    <rearMirrorTrueReflect ps="后视镜真实反射"></rearMirrorTrueReflect>
+  </CarControlTrigger>
+
+  <textWord ps="输入显示到屏幕的文字">释放电子手刹时，需要踩下刹车踏板</textWord>
+</root>

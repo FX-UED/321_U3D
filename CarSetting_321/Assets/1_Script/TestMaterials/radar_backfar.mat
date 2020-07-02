@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: radar_backfar
+  m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ANIUVSCALE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _LiuGuang:
+        m_Texture: {fileID: 2800000, guid: f3e4f98a2d82abe41958f14f0fb75684, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LiuGuang_Mask:
+        m_Texture: {fileID: 2800000, guid: b0f8ab2769349da43b9dd1001ac0e1d0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a48574cd71539e640b9d3213f8540f1b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UVNiuQu:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AniUVScale: 1
+    - _Cutoff: 0.5
+    - _LiuGuang_QiangDu: 9999
+    - _LiuGuang_Speed: 8.48
+    - _NiuQu_QiangDu: 0
+    - _UVScale: 1
+    - _WuAlpha: 0
+    m_Colors:
+    - _LiuGuang_Color: {r: 1, g: 0.89922833, b: 0, a: 1}
+    - _TintColor: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 0.03529412}

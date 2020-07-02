@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root ps="test">
+  <loadObject ps="添加预制体">
+    <prefab>
+      <name showTime="0" hideTime="-1">Wheels_control</name>
+      <name showTime="0" hideTime="-1">ryb-Camera</name>
+    </prefab>
+  </loadObject>
+  <cameraPosition ps="相机位置">
+    <cameraVector3>0.0,0.0,-10.0</cameraVector3>
+    <cameraEngle>0.0,0.0,0.0</cameraEngle>
+    <targetVector3>2.0,2.0,0.0</targetVector3>
+  </cameraPosition>
+  <SetPath ps="物体的路径运动" />
+  <UVanimation ps="UV动画" />
+  <modelAnimation ps="模型动画" />
+  <lightControl ps="灯光的开关" />
+  <carSpeed ps="车辆行驶" />
+  <changeMaterial ps="更改材质">
+    <modelName waitTime="2" materialName="Light_guangyun_red">ME5_carbody_z/Sheel/Sheel/Sheel_light_1</modelName>
+  </changeMaterial>
+  <lerpColor ps="物体变色" />
+  <carLight ps="车灯">
+    <lightState lightType="positionLight" waitTime="">
+    </lightState>
+    <lightState lightType="frontDecorateLight" waitTime="">
+    </lightState>
+    <lightState lightType="farLight" waitTime="">
+    </lightState>
+    <lightState lightType="logoLight" waitTime="">
+    </lightState>
+    <lightState lightType="fogLight" waitTime="">
+    </lightState>
+  </carLight>
+  <setTrail ps="拖尾" />
+  <rearViewMirror ps="车外后视镜翻转" />
+  <linerMove ps="直线位移" />
+  <CarControlTrigger ps="车辆功能开关，1是开，0是关">
+    <radar ps="车后方雷达">0</radar>
+    <frontLightfarNearAutoControl ps="自动远近光灯">0</frontLightfarNearAutoControl>
+    <frontLightrotateByRoad ps="车灯随动转向">0</frontLightrotateByRoad>
+    <wheelLRrotate ps="车轮左右转向">0</wheelLRrotate>
+    <rearMirrorTrueReflect ps="后视镜真实反射">0</rearMirrorTrueReflect>
+  </CarControlTrigger>
+  <textWord ps="输入显示到屏幕的文字">
+  </textWord>
+  <cameraBackgroundColor ps="屏幕背景色hex">00000000</cameraBackgroundColor>
+</root>

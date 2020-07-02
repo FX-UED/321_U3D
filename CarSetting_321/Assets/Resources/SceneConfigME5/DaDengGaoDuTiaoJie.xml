@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root ps="模板">
+
+  <loadObject ps="添加预制体">
+    
+    
+    
+    <prefab ps="请输入UI以外的预制体的名字,showTime输入 等待几秒钟后开始 显示的时间，hideTime输入 等待几秒钟后开始 隐藏的时间（-1代表永远不隐藏）">
+      <name showTime="0" hideTime="-1">car</name>
+      <name showTime="0" hideTime="-1">OthersTest</name>
+    </prefab>
+  
+  
+  </loadObject>
+
+  <cameraPosition ps="相机位置">
+    <cameraVector3 ps="输入相机的坐标,例如：0,0,0">6.29,1.01,-2.61</cameraVector3>
+    <targetVector3 ps="输入相机观看目标的坐标,例如：10,10,10">-1.33,0.68,-2.43</targetVector3>
+  </cameraPosition>
+
+
+
+  <textWord ps="输入显示到屏幕的文字">adflkjsadfljadsfjas;dkjfa;dksjfa;sdkjf;adkjsf;djf;</textWord>
+
+  <carLight ps="打开：1，关闭：0" >
+    <lightState lightType="positionLight"       waitTime=""></lightState>
+    <lightState lightType="fogLight"            waitTime=""></lightState>
+    <lightState lightType="logoLight"           waitTime=""></lightState>
+    <lightState lightType="farLight"            waitTime=""></lightState>
+    <lightState lightType="frontDecorateLight"  waitTime=""></lightState>
+    <lightState lightType="lowBeamLight"        waitTime=""></lightState>
+    <lightState lightType="highBeamLight"       waitTime=""></lightState>
+  </carLight>
+
+
+
+  <cameraBackgroundColor ps="屏幕背景色 r,g,b,a">0,0,0,255</cameraBackgroundColor>
+
+
+</root>
